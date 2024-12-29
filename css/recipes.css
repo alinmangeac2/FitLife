@@ -1,7 +1,17 @@
 ul li {
     background-color: #fff8e1;
     border-left: 4px solid #ffb300;
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 h1 {
     background-color: #f57c00;
+    color: white;
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+    font-size: 2em;
 }
