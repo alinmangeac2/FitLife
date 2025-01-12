@@ -32,6 +32,46 @@ nav a:hover {
     text-decoration: underline;
 }
 
+.hero {
+    background: url('path/to/your/image.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.feature {
+    background: white;
+    margin: 15px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+}
+
+.feature h2 {
+    color: #6200ea;
+    margin-bottom: 10px;
+}
+
 form {
     padding: 30px;
     background: white;
@@ -93,6 +133,25 @@ li {
 }
 
 .home-button:hover {
+    background-color: #3700b3;
+    text-decoration: none;
+}
+
+.login-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #6200ea;
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
     background-color: #3700b3;
     text-decoration: none;
 }
