@@ -4,7 +4,7 @@ body {
     padding: 0;
     background: url('../includes/login.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: rebeccapurple;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,7 +25,7 @@ body {
 
 .login-container h1 {
     background-color: rgba(255, 255, 255, 0.2);
-    color: white;
+    color: black;
     padding: 20px;
     margin: -20px -20px 20px -20px;
     border-radius: 10px 10px 0 0;
@@ -44,7 +44,7 @@ body {
     border-radius: 5px;
     outline: none;
     background: rgba(255, 255, 255, 0.2);
-    color: white;
+    color: black;
 }
 
 .login-container input::placeholder {
