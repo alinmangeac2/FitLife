@@ -4,7 +4,7 @@ body {
     padding: 0;
     background: url('../includes/login.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: white;
+    color: rebeccapurple;
     display: flex;
     justify-content: center;
     align-items: center;
