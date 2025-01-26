@@ -2,8 +2,8 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
+    background: linear-gradient(to right, #6200ea, #3700b3);
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,15 +14,16 @@ body {
     max-width: 400px;
     width: 100%;
     padding: 20px;
-    background: white;
-    border: 1px solid #ddd;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
 
 .login-container h1 {
-    background-color: #6200ea;
+    background-color: rgba(255, 255, 255, 0.2);
     color: white;
     padding: 20px;
     margin: -20px -20px 20px -20px;
@@ -36,11 +37,17 @@ body {
 }
 
 .login-container input {
-    width: calc(100% - 30px);
-    margin: 0 auto 15px;
-    padding: 10px;
-    border: 1px solid #ddd;
+    width: 100%;
+    padding: 12px;
+    border: none;
     border-radius: 5px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.login-container input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .remember-me {
@@ -60,15 +67,16 @@ body {
 .remember-me label {
     display: flex;
     align-items: center;
-    line-height: 1; 
+    line-height: 1;
 }
 
 button {
-    background-color: #6200ea;
+    background-color: #ff9800;
     color: white;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     padding: 15px;
     border-radius: 5px;
     font-size: 1em;
@@ -76,7 +84,8 @@ button {
 }
 
 button:hover {
-    background-color: #3700b3;
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
 }
 
 .links {
@@ -84,8 +93,11 @@ button:hover {
 }
 
 .links a {
-    color: #6200ea;
+    color: #ff9800;
     text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 10px 0;
 }
 
 .links a:hover {
