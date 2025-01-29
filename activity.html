@@ -4,22 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/activity.css">
     <title>Activity Tracker</title>
 </head>
 <body>
-    <a href="index.html" class="home-button">Home</a>
+    <nav>
+        <a href="index.html" class="home-button">Home</a>
+        <a href="activity.html">Activity Tracker</a>
+        <a href="food-journal.html">Food Journal</a>
+        <a href="water-reports.html">Water Reports</a>
+        <a href="goals.html">Set Goals</a>
+        <a href="recipes.html">Healthy Recipes</a>
+        <a href="stress-evaluation.html">Stress Evaluation</a>
+        <a href="login.html" class="login-button">Login</a>
+    </nav>
     <h1>Activity Tracker</h1>
-    <form>
-        <label>Steps:</label> <input type="number" name="steps"><br>
-        <label>Distance (km):</label> <input type="number" name="distance" step="0.01"><br>
-        <label>Exercises:</label> <input type="text" name="exercises"><br>
-        <label>Calories Burned:</label> <input type="number" name="calories"><br>
-        <button type="submit">Add to History</button>
-    </form>
-    <h2>History</h2>
     <ul>
-        <li>Example Record: 5000 steps, 3 km, 250 calories</li>
+        <li><strong>Type:</strong> Running <br><strong>Duration:</strong> 30 minutes <br><strong>Calories Burned:</strong> 300 <br><strong>Date:</strong> 2023-10-01</li>
+        <li><strong>Type:</strong> Cycling <br><strong>Duration:</strong> 45 minutes <br><strong>Calories Burned:</strong> 400 <br><strong>Date:</strong> 2023-10-02</li>
+        <li><strong>Type:</strong> Swimming <br><strong>Duration:</strong> 60 minutes <br><strong>Calories Burned:</strong> 500 <br><strong>Date:</strong> 2023-10-03</li>
     </ul>
 </body>
 </html>

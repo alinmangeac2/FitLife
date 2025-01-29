@@ -1,6 +1,12 @@
 form {
     background-color: #ede7f6;
 }
+
 h1 {
     background-color: #6a1b9a;
+    color: white;
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+    font-size: 2em;
 }
