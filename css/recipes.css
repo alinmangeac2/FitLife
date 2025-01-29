@@ -15,3 +15,30 @@ h1 {
     text-align: center;
     font-size: 2em;
 }
+
+body {
+    padding-top: 60px; /* Adjust for fixed nav */
+}
+
+.recipes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.recipe {
+    background: white;
+    margin: 15px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    text-align: center;
+}
+
+.recipe h2 {
+    color: #6200ea;
+    margin-bottom: 10px;
+}

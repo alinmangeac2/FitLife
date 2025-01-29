@@ -2,6 +2,7 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    padding-top: 60px; /* Adjust for fixed nav */
     background-color: #f4f4f9;
     color: #333;
 }
@@ -19,6 +20,11 @@ nav {
     background-color: #333;
     padding: 15px;
     text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 nav a {
@@ -26,6 +32,7 @@ nav a {
     text-decoration: none;
     margin: 0 20px;
     font-size: 1.1em;
+    display: inline-block; /* Ensure links are inline */
 }
 
 nav a:hover {
@@ -42,6 +49,7 @@ nav a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 60px; /* Adjust for fixed nav */
 }
 
 .hero p {
@@ -54,6 +62,7 @@ nav a:hover {
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
+    padding-top: 80px; /* Adjust for fixed nav */
 }
 
 .feature {
@@ -130,6 +139,7 @@ li {
     font-size: 1em;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s;
+    display: inline-block; /* Ensure button is inline */
 }
 
 .home-button:hover {
@@ -149,6 +159,7 @@ li {
     font-size: 1em;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s;
+    display: inline-block; /* Ensure button is inline */
 }
 
 .login-button:hover {
