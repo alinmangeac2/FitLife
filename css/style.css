@@ -4,7 +4,7 @@ body {
     padding: 0;
     padding-top: 60px; /* Adjust for fixed nav */
     background-color: #f4f4f9;
-    color: #333;
+    color: #333; /* Set text color to dark */
 }
 
 h1 {
@@ -43,7 +43,7 @@ nav a:hover {
     background: url('path/to/your/image.jpg') no-repeat center center;
     background-size: cover;
     height: 100vh;
-    color: white;
+    color: #333; /* Set text color to dark */
     text-align: center;
     display: flex;
     flex-direction: column;
