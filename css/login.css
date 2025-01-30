@@ -58,7 +58,7 @@ body {
 }
 
 .remember-me input {
-    margin-right: 10px;
+    margin-right: 100px; /* Add space between checkbox and text */
     width: 18px;
     height: 18px;
     margin: 0;

@@ -8,72 +8,86 @@ body {
 }
 
 h1 {
-    background-color: #6200ea;
+    background: linear-gradient(45deg, #6200ea, #ff4081);
     color: white;
     padding: 20px;
-    margin: 0;
     text-align: center;
     font-size: 2em;
+    border-radius: 0; /* Remove border radius */
+    margin: 0; /* Remove margin */
+    width: 100%; /* Set width to 100% */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative; /* Ensure it stays in flow */
+    top: -7px; /* Adjust to overlap nav padding */
 }
 
+/* Navigation Bar */
 nav {
     background-color: #333;
-    padding: 15px;
+    padding: 15px 0;
     text-align: center;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 20px;
+    margin: 0 15px;
     font-size: 1.1em;
-    display: inline-block; /* Ensure links are inline */
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    background-color: #6200ea;
+    transform: translateY(-2px);
 }
 
 .hero {
     background: url('path/to/your/image.jpg') no-repeat center center;
     background-size: cover;
-    height: 100vh;
-    color: #333; /* Set text color to dark */
+    height: 40vh; /* Reduce height */
+    color: darkblue;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 60px; /* Adjust for fixed nav */
+    padding: 20px;
+    font-size: 2.3em;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    margin-bottom: 0; /* Ensure it doesn’t push down */
 }
 
-.hero p {
-    font-size: 1.2em;
-    margin-top: 20px;
-}
-
+/* Center the features section */
 .features {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
-    padding-top: 80px; /* Adjust for fixed nav */
+    margin-top: -10vh; /* Move it up slightly */
+    text-align: center;
 }
 
+/* Reduce feature box spacing */
 .feature {
     background: white;
-    margin: 15px;
+    margin: 10px;
     padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
-    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    max-width: 280px;
+    transition: transform 0.3s;
+}
+
+.feature:hover {
+    transform: scale(1.05);
 }
 
 .feature h2 {
@@ -81,11 +95,46 @@ nav a:hover {
     margin-bottom: 10px;
 }
 
+/* Buttons */
+.home-button, .login-button {
+    position: absolute;
+    top: 15px;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1em;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.home-button {
+    left: 15px;
+    background-color: #4caf50;
+    color: white;
+}
+
+.home-button:hover {
+    background-color: #388e3c;
+    transform: translateY(-3px);
+}
+
+.login-button {
+    right: 15px;
+    background-color: #ff4081;
+    color: white;
+}
+
+.login-button:hover {
+    background-color: #e91e63;
+    transform: translateY(-3px);
+}
+
+/* Forms */
 form {
     padding: 30px;
     background: white;
-    margin: 30px auto;
-    border: 1px solid #ddd;
+    margin: 40px auto;
     border-radius: 10px;
     max-width: 500px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -97,22 +146,24 @@ input, select, button {
     margin: 15px 0;
     padding: 15px;
     font-size: 1em;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
 }
 
 button {
     background-color: #6200ea;
     color: white;
-    border: none;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: 0.3s ease;
 }
 
 button:hover {
     background-color: #3700b3;
+    transform: translateY(-2px);
 }
 
+/* Lists */
 ul {
     list-style-type: none;
     padding: 0;
@@ -122,47 +173,6 @@ li {
     background: #fff;
     margin: 15px 0;
     padding: 15px;
-    border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.home-button {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    background-color: #6200ea;
-    color: white;
-    text-decoration: none;
-    padding: 15px 20px;
-    border-radius: 5px;
-    font-size: 1em;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s;
-    display: inline-block; /* Ensure button is inline */
-}
-
-.home-button:hover {
-    background-color: #3700b3;
-    text-decoration: none;
-}
-
-.login-button {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background-color: #6200ea;
-    color: white;
-    text-decoration: none;
-    padding: 15px 20px;
-    border-radius: 5px;
-    font-size: 1em;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s;
-    display: inline-block; /* Ensure button is inline */
-}
-
-.login-button:hover {
-    background-color: #3700b3;
-    text-decoration: none;
 }
