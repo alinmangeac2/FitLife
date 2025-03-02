@@ -47,14 +47,17 @@ form p {
     color: #333;
 }
 
-form input[type="radio"] {
-    margin: 10px 5px 10px 0;
-}
-
+/* Fix for radio button alignment */
 form label {
-    margin-left: 5px;
+    display: flex;
+    align-items: center; /* Align radio button and label vertically */
+    margin: 10px 0;
     font-size: 1em;
     color: #333;
+}
+
+form input[type="radio"] {
+    margin: 0 10px 0 0; /* Add space between radio button and label */
 }
 
 form button {
