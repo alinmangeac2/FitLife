@@ -1,11 +1,10 @@
-/* General Styles */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     padding-top: 60px; /* Adjust for fixed nav */
     background-color: #f4f4f9;
-    color: #333;
+    color: #333; /* Set text color to dark */
 }
 
 h1 {
@@ -14,12 +13,12 @@ h1 {
     padding: 20px;
     text-align: center;
     font-size: 2em;
-    border-radius: 0;
-    margin: 0;
-    width: 100%;
+    border-radius: 0; /* Remove border radius */
+    margin: 0; /* Remove margin */
+    width: 100%; /* Set width to 100% */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative;
-    top: -7px;
+    position: relative; /* Ensure it stays in flow */
+    top: -7px; /* Adjust to overlap nav padding */
 }
 
 /* Navigation Bar */
@@ -50,6 +49,53 @@ nav a:hover {
     transform: translateY(-2px);
 }
 
+.hero {
+    background: url('path/to/your/image.jpg') no-repeat center center;
+    background-size: cover;
+    height: 40vh; /* Reduce height */
+    color: darkblue;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 2.3em;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    margin-bottom: 0; /* Ensure it doesn’t push down */
+}
+
+/* Center the features section */
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    margin-top: -10vh; /* Move it up slightly */
+    text-align: center;
+}
+
+/* Reduce feature box spacing */
+.feature {
+    background: white;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    max-width: 280px;
+    transition: transform 0.3s;
+}
+
+.feature:hover {
+    transform: scale(1.05);
+}
+
+.feature h2 {
+    color: #6200ea;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
 .home-button, .login-button {
     position: absolute;
     top: 15px;
@@ -100,15 +146,9 @@ input, select, button {
     margin: 15px 0;
     padding: 15px;
     font-size: 1em;
-    border: 1px solid #ddd; /* Add border to inputs */
+    border: none;
     border-radius: 8px;
     outline: none;
-    background-color: #fff; /* Ensure background is white */
-    color: #333; /* Ensure text color is dark */
-}
-
-input::placeholder {
-    color: #999; /* Placeholder text color */
 }
 
 button {
@@ -135,175 +175,4 @@ li {
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Activity Tracker */
-.activity-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-
-/* Food Journal */
-.food-journal-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-
-/* Goals */
-.goals-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-
-/* Login */
-.login-container {
-    max-width: 400px;
-    width: 100%;
-    padding: 20px;
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.login-container h1 {
-    background-color: #6200ea;
-    color: white;
-    padding: 20px;
-    margin: -20px -20px 20px -20px;
-    border-radius: 10px 10px 0 0;
-}
-
-.login-container label {
-    display: block;
-    margin: 10px 0 5px;
-    text-align: left;
-}
-
-.login-container input {
-    width: calc(100% - 30px);
-    margin: 0 auto 15px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background: #fff; /* Ensure background is white */
-    color: #333; /* Ensure text color is dark */
-}
-
-.login-container input::placeholder {
-    color: #999; /* Placeholder text color */
-}
-
-.remember-me {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 15px;
-}
-
-.remember-me input {
-    margin-right: 100px;
-    width: 18px;
-    height: 18px;
-    margin: 0;
-    vertical-align: middle;
-}
-
-.remember-me label {
-    display: flex;
-    align-items: center;
-    line-height: 1;
-}
-
-.links {
-    margin-top: 15px;
-}
-
-.links a {
-    color: #ff9800;
-    text-decoration: none;
-    font-weight: bold;
-    display: block;
-    padding: 10px 0;
-}
-
-.links a:hover {
-    text-decoration: underline;
-}
-
-/* Recipes */
-.recipes-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-
-.recipe {
-    background: white;
-    margin: 15px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    text-align: center;
-}
-
-.recipe h2 {
-    color: #6200ea;
-    margin-bottom: 10px;
-}
-
-/* Stress Evaluation */
-.stress-tips {
-    margin-top: 20px;
-}
-
-.stress-tips ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.stress-tips li {
-    background: #fff;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Water Reports */
-.water-reports-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-
-/* Progress Bars */
-.progress-container {
-    margin: 20px 0;
-}
-
-.progress-bar {
-    width: 100%;
-    background-color: #e0e0e0;
-    border-radius: 5px;
-    overflow: hidden;
-}
-
-.progress {
-    height: 20px;
-    background-color: #76c7c0;
-    text-align: center;
-    color: white;
-    line-height: 20px;
 }
