@@ -1,53 +1,104 @@
+/* stress-evaluation.css */
 body {
     padding-top: 60px; /* Adjust for fixed nav */
-}
-
-form {
-    padding: 30px;
-    background: white;
-    margin: 30px auto;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    max-width: 500px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center everything horizontally */
+    justify-content: flex-start; /* Start content from the top */
+    min-height: 100vh; /* Ensure the body takes up the full viewport height */
+    margin: 0;
+    background-color: #f4f4f9; /* Match the global background color */
 }
 
 h1 {
-    background-color: #388e3c;
+    background-color: #388e3c; /* Green header */
     color: white;
     padding: 20px;
     margin: 0;
     text-align: center;
     font-size: 2em;
+    width: 100%; /* Ensure the h1 takes up the full width */
+    box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
-input, select, button {
-    display: block;
+.stress-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center children horizontally */
+    width: 100%; /* Take up the full width */
+    max-width: 800px; /* Optional: Limit the maximum width */
+    padding: 20px;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
-    margin: 15px 0;
-    padding: 15px;
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+
+form p {
+    margin: 0 0 15px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+form input[type="radio"] {
+    margin: 10px 5px 10px 0;
+}
+
+form label {
+    margin-left: 5px;
     font-size: 1em;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    color: #333;
 }
 
-input[type="radio"] {
-    margin: 10px 0;
-}
-
-button {
+form button {
     background-color: #6200ea;
     color: white;
+    padding: 10px 20px;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    padding: 15px;
-    border-radius: 5px;
-    font-size: 1em;
     width: 100%;
     margin-top: 20px;
 }
 
-button:hover {
+form button:hover {
     background-color: #3700b3;
+}
+
+/* Stress Tips Section */
+.stress-tips {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin-top: 20px;
+}
+
+.stress-tips h2 {
+    margin-top: 0;
+    color: #388e3c; /* Green header */
+}
+
+.stress-tips ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.stress-tips li {
+    background: #f9f9f9;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
