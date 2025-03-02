@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/goals.css">
     <title>Set Goals</title>
 </head>
 <body>
@@ -19,16 +18,24 @@
         <a href="login.html" class="login-button">Login</a>
     </nav>
     <h1>Set Your Goals</h1>
-    <form>
-        <label>Current Weight (kg):</label> <input type="number" name="current-weight"><br>
-        <label>Target Weight (kg):</label> <input type="number" name="target-weight"><br>
+    <form id="goal-form">
+        <label>Current Weight (kg):</label> <input type="number" name="current-weight" required><br>
+        <label>Target Weight (kg):</label> <input type="number" name="target-weight" required><br>
         <label>Goal:</label>
-        <select>
-            <option>Lose Weight</option>
-            <option>Gain Muscle</option>
-            <option>Maintain Weight</option>
+        <select name="goal" required>
+            <option value="lose-weight">Lose Weight</option>
+            <option value="gain-muscle">Gain Muscle</option>
+            <option value="maintain-weight">Maintain Weight</option>
         </select><br>
         <button type="submit">Save Goal</button>
     </form>
+    <div class="progress-container">
+        <h2>Goal Progress</h2>
+        <div class="progress-bar">
+            <div class="progress" style="width: 40%;">40%</div>
+        </div>
+        <p>You are 40% towards your goal of losing 10 kg.</p>
+    </div>
+    <script src="js/goals.js"></script>
 </body>
 </html>

@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/stress-evaluation.css">
     <title>Stress Evaluation</title>
 </head>
 <body>
@@ -19,12 +18,22 @@
         <a href="login.html" class="login-button">Login</a>
     </nav>
     <h1>Stress Evaluation</h1>
-    <form>
+    <form id="stress-form">
         <p>How often do you feel stressed?</p>
-        <input type="radio" name="stress" value="often"> Often<br>
-        <input type="radio" name="stress" value="sometimes"> Sometimes<br>
-        <input type="radio" name="stress" value="rarely"> Rarely<br>
+        <input type="radio" name="stress" value="often" required> Often<br>
+        <input type="radio" name="stress" value="sometimes" required> Sometimes<br>
+        <input type="radio" name="stress" value="rarely" required> Rarely<br>
         <button type="submit">Submit</button>
     </form>
+    <div class="stress-tips">
+        <h2>Tips to Reduce Stress</h2>
+        <ul>
+            <li>Practice deep breathing exercises.</li>
+            <li>Take regular breaks during work.</li>
+            <li>Engage in physical activity.</li>
+            <li>Maintain a healthy diet.</li>
+        </ul>
+    </div>
+    <script src="js/stress-evaluation.js"></script>
 </body>
 </html>
