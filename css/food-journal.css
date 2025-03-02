@@ -1,37 +1,11 @@
 /* Food Journal Specific Styles */
-body {
-    padding-top: 60px; /* Adjust for fixed nav */
-    background-color: #f4f4f9; /* Match the global background color */
-    font-family: 'Roboto', sans-serif;
-    color: #333;
-}
-
-h1 {
-    background-color: #1e88e5;
-    color: white;
-    padding: 20px;
-    margin: 0;
-    text-align: center;
-    font-size: 2em;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.food-journal-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns: form and list */
-    gap: 20px; /* Space between columns */
-    max-width: 1200px; /* Limit the maximum width */
-    margin: 20px auto; /* Center the container */
-    padding: 20px;
-    box-sizing: border-box;
-}
-
 #food-form {
-    background-color: #fff;
+    background-color: #fff3e0; /* Light orange background for the form */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 20px auto;
 }
 
 #food-form label {
@@ -48,12 +22,12 @@ h1 {
     margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    background-color: #fff;
-    color: #333;
+    background-color: #fff; /* White background for inputs */
+    color: #333; /* Dark text color */
 }
 
 #food-form input::placeholder {
-    color: #999;
+    color: #999; /* Placeholder text color */
 }
 
 #food-form button {
@@ -64,58 +38,8 @@ h1 {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    width: 100%;
 }
 
 #food-form button:hover {
     background-color: #3700b3;
-}
-
-/* Daily Totals Section */
-#daily-totals {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
-
-#daily-totals h2 {
-    margin-top: 0;
-    color: #1e88e5;
-}
-
-#daily-totals p {
-    font-size: 1.2em;
-    color: #333;
-}
-
-/* Food List Styles */
-#food-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-#food-list li {
-    background: #fff;
-    margin: 15px 0;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-#food-list li strong {
-    color: #1e88e5;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .food-journal-container {
-        grid-template-columns: 1fr; /* Stack columns on smaller screens */
-    }
 }
