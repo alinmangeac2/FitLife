@@ -1,39 +1,45 @@
-body {
-    padding-top: 60px; /* Adjust for fixed nav */
-}
-
-form {
-    background-color: #fff3e0;
-}
-
-.food-journal-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Food Journal Specific Styles */
+#food-form {
+    background-color: #fff3e0; /* Light orange background for the form */
     padding: 20px;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    background: white;
-    margin: 15px;
-    padding: 20px;
-    border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 500px;
-    text-align: center;
+    margin: 20px auto;
 }
 
-h1 {
-    background-color: #1e88e5;
+#food-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+#food-form input,
+#food-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff; /* White background for inputs */
+    color: #333; /* Dark text color */
+}
+
+#food-form input::placeholder {
+    color: #999; /* Placeholder text color */
+}
+
+#food-form button {
+    background-color: #6200ea;
     color: white;
-    padding: 20px;
-    margin: 0;
-    text-align: center;
-    font-size: 2em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#food-form button:hover {
+    background-color: #3700b3;
 }
