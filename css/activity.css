@@ -1,28 +1,42 @@
 /* activity.css */
 body {
     padding-top: 60px; /* Adjust for fixed nav */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center everything horizontally */
+    justify-content: center; /* Center everything vertically */
+    min-height: 100vh; /* Ensure the body takes up the full viewport height */
+    margin: 0;
 }
 
 .activity-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* Center children horizontally */
+    width: 100%; /* Take up the full width */
+    max-width: 800px; /* Optional: Limit the maximum width */
     padding: 20px;
+    box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 ul {
     list-style-type: none;
     padding: 0;
+    width: 100%; /* Ensure the ul takes up the full width of its container */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center list items horizontally */
 }
 
 li {
     background: white;
-    margin: 15px;
+    margin: 15px 0; /* Adjust margin for better spacing */
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
+    width: 100%; /* Ensure list items take up the full width */
+    max-width: 500px; /* Limit the maximum width of list items */
     text-align: center;
 }
 
@@ -33,12 +47,16 @@ h1 {
     margin: 0;
     text-align: center;
     font-size: 2em;
+    width: 100%; /* Ensure the h1 takes up the full width */
+    box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 /* Progress Bar Styles */
 .progress-container {
     margin: 20px 0;
     text-align: center;
+    width: 100%; /* Ensure the progress container takes up the full width */
+    max-width: 500px; /* Limit the maximum width */
 }
 
 .progress-bar {
