@@ -100,9 +100,15 @@ input, select, button {
     margin: 15px 0;
     padding: 15px;
     font-size: 1em;
-    border: none;
+    border: 1px solid #ddd; /* Add border to inputs */
     border-radius: 8px;
     outline: none;
+    background-color: #fff; /* Ensure background is white */
+    color: #333; /* Ensure text color is dark */
+}
+
+input::placeholder {
+    color: #999; /* Placeholder text color */
 }
 
 button {
@@ -187,12 +193,12 @@ li {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    background: rgba(255, 255, 255, 0.2);
-    color: black;
+    background: #fff; /* Ensure background is white */
+    color: #333; /* Ensure text color is dark */
 }
 
 .login-container input::placeholder {
-    color: rgba(0, 0, 0, 0.5);
+    color: #999; /* Placeholder text color */
 }
 
 .remember-me {
