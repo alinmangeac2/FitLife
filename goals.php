@@ -1,3 +1,19 @@
+<?php
+session_start();
+include 'config/db.php';
+
+// Check if the user is logged in
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit();
+}
+
+// Fetch user-specific data if needed
+$user_id = $_SESSION['user_id'];
+
+// You can add more user-specific logic here if necessary
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,21 +23,12 @@
     <link rel="stylesheet" href="css/goals.css"> <!-- Scoped styles -->
     <title>Set Goals</title>
 </head>
-<body>
-    <nav>
-        <a href="index.html" class="home-button">Home</a>
-        <a href="activity.html">Activity Tracker</a>
-        <a href="food-journal.html">Food Journal</a>
-        <a href="water-reports.html">Water Reports</a>
-        <a href="goals.html">Set Goals</a>
-        <a href="recipes.html">Healthy Recipes</a>
-        <a href="stress-evaluation.html">Stress Evaluation</a>
-        <a href="login.html" class="login-button">Login</a>
-    </nav>
+<body class="goals-page">
+    <?php include 'includes/header.php'; ?>
     <h1>Set Your Goals</h1>
     <div class="goals-container">
         <!-- Goal Form -->
-        <form id="goal-form">
+        <form id="goal-form" action="save_goal.php" method="post">
             <label>Current Weight (kg):</label> <input type="number" name="current-weight" required><br>
             <label>Target Weight (kg):</label> <input type="number" name="target-weight" required><br>
             <label>Goal:</label>
@@ -42,6 +49,5 @@
             <p>You are 40% towards your goal of losing 10 kg.</p>
         </div>
     </div>
-    <script src="js/goals.js"></script>
 </body>
 </html>

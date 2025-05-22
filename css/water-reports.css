@@ -1,81 +1,160 @@
-/* water-reports.css */
 body {
-    padding-top: 60px; /* Adjust for fixed nav */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center everything horizontally */
-    justify-content: flex-start; /* Start content from the top */
-    min-height: 100vh; /* Ensure the body takes up the full viewport height */
-    margin: 0;
-    background-color: #f4f4f9; /* Match the global background color */
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
 }
 
 h1 {
-    background-color: #1e88e5;
+    background: linear-gradient(45deg, #6200ea, #ff4081);
     color: white;
     padding: 20px;
-    margin: 0;
     text-align: center;
     font-size: 2em;
-    width: 100%; /* Ensure the h1 takes up the full width */
-    box-sizing: border-box; /* Ensure padding is included in the width */
+    margin: 0;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: #333;
+    padding: 15px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1em;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+nav a:hover {
+    background-color: #6200ea;
+    transform: translateY(-2px);
 }
 
 .water-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center children horizontally */
-    width: 100%; /* Take up the full width */
-    max-width: 800px; /* Optional: Limit the maximum width */
-    padding: 20px;
-    box-sizing: border-box; /* Ensure padding is included in the width */
+    align-items: center;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-    width: 100%; /* Ensure the ul takes up the full width of its container */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center list items horizontally */
-}
-
-li {
-    background: white;
-    margin: 15px 0; /* Adjust margin for better spacing */
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Ensure list items take up the full width */
-    max-width: 500px; /* Limit the maximum width of list items */
-    text-align: center;
-}
-
-/* Progress Bar Styles */
 .progress-container {
-    margin: 20px 0;
     text-align: center;
-    width: 100%; /* Ensure the progress container takes up the full width */
-    max-width: 500px; /* Limit the maximum width */
+    margin: 20px 0;
+    width: 100%;
+    max-width: 500px;
 }
 
 .progress-bar {
     width: 100%;
-    height: 20px;
-    background-color: #e0e0e0;
-    border-radius: 10px;
+    height: 30px;
+    background-color: #f3f3f3;
+    border-radius: 25px;
     overflow: hidden;
+    margin: 10px 0;
     position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .progress {
     height: 100%;
     background-color: #76c7c0;
-    border-radius: 10px;
-    transition: width 0.3s ease;
     text-align: center;
-    line-height: 20px;
+    line-height: 30px;
     color: white;
     font-size: 0.9em;
+    border-radius: 25px 0 0 25px;
+    transition: width 0.3s ease;
+}
+
+.water-form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.water-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.water-form label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.water-form input {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.water-form button {
+    padding: 15px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.water-form button:hover {
+    background-color: #388e3c;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+li {
+    background: white;
+    margin: 15px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
 }
