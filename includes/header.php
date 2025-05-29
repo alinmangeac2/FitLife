@@ -19,7 +19,7 @@ if (session_status() == PHP_SESSION_NONE) {
             <a href="activity.php">Activity Tracker</a>
             <a href="food-journal.php">Food Journal</a>
             <a href="water-reports.php">Water Reports</a>
-            <a href="goals.php">Set Goals</a>
+            <a href="goals.php">Goals</a>
             <a href="recipes.php">Healthy Recipes</a>
             <a href="stress-evaluation.php">Stress Evaluation</a>
             <div class="auth-buttons">

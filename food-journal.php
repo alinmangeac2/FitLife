@@ -57,42 +57,42 @@ $conn->close();
     <title>Food Journal</title>
 </head>
 <body class="food-journal-page">
-<?php include 'includes/header.php'; ?>
-<h1>Food Journal</h1>
-<div class="content">
-    <form id="food-form" class="food-form" action="food-journal.php" method="post">
-<div class="form-group">
-        <label for="meal">Meal:</label>
-<input type="text" id="meal" name="meal" required>
-        </div>
-        <div class="form-group">
-        <label for="calories">Calories:</label>
-<input type="number" id="calories" name="calories" required>
-        </div>
-        <div class="form-group">
-        <label for="meal_type">Meal Type:</label> 
-        <select id="meal_type" name="meal_type" required>
-            <option value="breakfast">Breakfast</option>
-            <option value="lunch">Lunch</option>
-            <option value="dinner">Dinner</option>
-            <option value="snack">Snack</option>
-        </select>
-        </div>
-        <button type="submit" class="btn-submit">Add Meal</button>
-    </form>
-    <h2>Daily Totals</h2>
-    <p>Calories: <span id="total-calories">0</span></p>
-    <ul id="food-list">
-        <?php foreach ($food_entries as $entry): ?>
-        <li>
-            <strong>Food Item:</strong> <?php echo htmlspecialchars($entry['food_item']); ?> <br>
-            <strong>Calories:</strong> <?php echo htmlspecialchars($entry['calories']); ?> <br>
-            <strong>Meal Type:</strong> <?php echo htmlspecialchars($entry['meal_type']); ?> <br>
-            <strong>Date:</strong> <?php echo htmlspecialchars($entry['food_date']); ?>
-        </li>
-        <?php endforeach; ?>
-    </ul>
-</div>
-<script src="js/food-journal.js"></script>
+    <?php include 'includes/header.php'; ?>
+    <h1>Food Journal</h1>
+    <div class="content">
+        <form id="food-form" class="food-form" action="food-journal.php" method="post">
+            <div class="form-group">
+                <label for="meal">Meal:</label>
+                <input type="text" id="meal" name="meal" required>
+            </div>
+            <div class="form-group">
+                <label for="calories">Calories:</label>
+                <input type="number" id="calories" name="calories" required>
+            </div>
+            <div class="form-group">
+                <label for="meal_type">Meal Type:</label>
+                <select id="meal_type" name="meal_type" required>
+                    <option value="breakfast">Breakfast</option>
+                    <option value="lunch">Lunch</option>
+                    <option value="dinner">Dinner</option>
+                    <option value="snack">Snack</option>
+                </select>
+            </div>
+            <button type="submit" class="btn-submit">Add Meal</button>
+        </form>
+        <h2>Daily Totals</h2>
+        <p>Calories: <span id="total-calories">0</span></p>
+        <ul id="food-list">
+            <?php foreach ($food_entries as $entry): ?>
+                <li>
+                    <strong>Food Item:</strong> <?php echo htmlspecialchars($entry['food_item']); ?> <br>
+                    <strong>Calories:</strong> <?php echo htmlspecialchars($entry['calories']); ?> <br>
+                    <strong>Meal Type:</strong> <?php echo htmlspecialchars($entry['meal_type']); ?> <br>
+                    <strong>Date:</strong> <?php echo htmlspecialchars($entry['food_date']); ?>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+    <script src="js/food-journal.js"></script>
 </body>
 </html>

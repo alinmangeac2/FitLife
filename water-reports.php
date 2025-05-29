@@ -8,15 +8,10 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
     $user_id = $_SESSION['user_id'];
     $water_intake = $_POST['water_intake'];
-    $intake_date = $_POST['intake_date'];
-
-    // Validate and format the date
-    if (!preg_match('/^\d{4}-\d{2}-\d{2}$/', $intake_date)) {
-        echo "Invalid date format! Please use YYYY-MM-DD.";
-        exit();
-    }
+    $intake_date = date('Y-m-d'); // Automatically use today's date
 
     // Prepare the SQL statement
     $sql = "INSERT INTO water_reports (user_id, water_intake, intake_date) VALUES (?, ?, ?)";
@@ -85,9 +80,6 @@ $progress_percentage = min(100, ($total_water / $water_goal) * 100);
                 
                 <label for="water_intake">Water Intake (ml):</label>
                 <input type="number" id="water_intake" name="water_intake" required>
-
-                <label for="intake_date">Date:</label>
-                <input type="date" id="intake_date" name="intake_date" required>
 
                 <button type="submit">Add Water Intake</button>
             </form>

@@ -12,13 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $activity_type = $_POST['activity_type'];
     $duration = $_POST['duration'];
     $calories_burned = $_POST['calories_burned'];
-    $activity_date = $_POST['activity_date'];
-
-    // Validate and format the date
-    if (!preg_match('/^\d{4}-\d{2}-\d{2}$/', $activity_date)) {
-        echo "Invalid date format! Please use YYYY-MM-DD.";
-        exit();
-    }
+    $activity_date = date('Y-m-d'); // Automatically use today's date
 
     // Prepare the SQL statement
     $sql = "INSERT INTO activity (user_id, activity_type, duration, calories_burned, activity_date) 
@@ -116,9 +110,6 @@ $progress_percentage = min(100, ($total_calories / $calories_goal) * 100);
 
                 <label for="calories_burned">Calories Burned:</label>
                 <input type="number" id="calories_burned" name="calories_burned" required>
-
-                <label for="activity_date">Date:</label>
-                <input type="date" id="activity_date" name="activity_date" required>
 
                 <button type="submit">Add Activity</button>
             </form>

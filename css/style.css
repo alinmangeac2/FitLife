@@ -83,11 +83,7 @@ nav a:hover {
 
 /* Add padding to the content to create space below the fixed nav */
 .content {
-    padding-top: 30px; /* Adjust as needed for spacing below h1 */
-    max-width: 800px;  /* match your form/list max-width */
-    margin: 0 auto;    /* center the content */
-    width: 100%;
-    box-sizing: border-box;
+    padding-top: 0px; /* Match the height of the nav */
 }
 
 /* Reset h1 margins */

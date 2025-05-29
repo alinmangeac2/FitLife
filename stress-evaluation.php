@@ -8,15 +8,10 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
     $user_id = $_SESSION['user_id'];
     $stress_level = $_POST['stress_level'];
-    $evaluation_date = $_POST['evaluation_date'];
-
-    // Validate and format the date
-    if (!preg_match('/^\d{4}-\d{2}-\d{2}$/', $evaluation_date)) {
-        echo "Invalid date format! Please use YYYY-MM-DD.";
-        exit();
-    }
+    $evaluation_date = date('Y-m-d'); // Automatically use today's date
 
     // Prepare the SQL statement
     $sql = "INSERT INTO stress_evaluation (user_id, stress_level, evaluation_date) VALUES (?, ?, ?)";
@@ -44,7 +39,7 @@ $user_id = $_SESSION['user_id'];
 $current_date = date('Y-m-d');
 
 // Fetch latest stress evaluation
-$sql = "SELECT stress_level FROM stress_evaluation WHERE user_id = ? AND evaluation_date = ?";
+$sql = "SELECT stress_level FROM stress_evaluation WHERE user_id = ? AND evaluation_date = ? ORDER BY id DESC LIMIT 1";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("is", $user_id, $current_date);
 $stmt->execute();
@@ -81,9 +76,6 @@ $conn->close();
                 
                 <label for="stress_level">Stress Level (1-10):</label>
                 <input type="number" id="stress_level" name="stress_level" min="1" max="10" required>
-
-                <label for="evaluation_date">Date:</label>
-                <input type="date" id="evaluation_date" name="evaluation_date" required>
 
                 <button type="submit">Submit</button>
             </form>

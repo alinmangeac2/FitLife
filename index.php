@@ -38,7 +38,7 @@ session_start();
                 <p>Ensure you are staying hydrated throughout the day.</p>
             </div>
             <div class="feature">
-                <h2>Set Goals</h2>
+                <h2>Goals</h2>
                 <p>Set and achieve your health and fitness goals.</p>
             </div>
             <div class="feature">
