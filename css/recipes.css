@@ -1,44 +1,44 @@
-ul li {
-    background-color: #fff8e1;
-    border-left: 4px solid #ffb300;
-    margin: 15px 0;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+/* Recipes page specific styles */
+body.recipes-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+    padding: 0; /* Remove padding-top since we're using margin-top on h1 */
 }
 
-h1 {
-    background-color: #f57c00;
-    color: white;
-    padding: 20px;
-    margin: 0;
-    text-align: center;
-    font-size: 2em;
-}
-
-body {
-    padding-top: 60px; /* Adjust for fixed nav */
-}
 
 .recipes-container {
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .recipe {
     background: white;
-    margin: 15px;
-    padding: 20px;
+    margin: 15px 0;
+    padding: 25px; 
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
     max-width: 500px;
     text-align: center;
 }
 
 .recipe h2 {
     color: #6200ea;
-    margin-bottom: 10px;
+    margin: 0 0 15px 0;
+    font-size: 1.5em;
+}
+
+.recipe p {
+    margin: 0;
+    color: #333;
+    line-height: 1.5;
 }

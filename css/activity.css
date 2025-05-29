@@ -1,24 +1,28 @@
+
 /* activity.css */
-body {
-    padding-top: 60px; /* Adjust for fixed nav */
+body.activity-page {
+    padding-top: 70px; /* Offset for fixed nav */
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center everything horizontally */
-    justify-content: flex-start; /* Start content from the top */
-    min-height: 100vh; /* Ensure the body takes up the full viewport height */
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
     margin: 0;
-    background-color: #f4f4f9; /* Match the global background color */
+    background-color: #f4f4f9;
 }
 
 .activity-container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center children horizontally */
-    width: 100%; /* Take up the full width */
-    max-width: 800px; /* Optional: Limit the maximum width */
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
     padding: 20px;
-    box-sizing: border-box; /* Ensure padding is included in the width */
+    box-sizing: border-box;
 }
+
+
+
 
 ul {
     list-style-type: none;
@@ -39,17 +43,6 @@ li {
     width: 100%; /* Ensure list items take up the full width */
     max-width: 500px; /* Limit the maximum width of list items */
     text-align: center;
-}
-
-h1 {
-    background-color: #1e88e5;
-    color: white;
-    padding: 20px;
-    margin: 0;
-    text-align: center;
-    font-size: 2em;
-    width: 100%; /* Ensure the h1 takes up the full width */
-    box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 /* Progress Bar Styles */
@@ -78,4 +71,49 @@ h1 {
     line-height: 20px;
     color: white;
     font-size: 0.9em;
+}
+
+.activity-form {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    width: 60%; /* Increase the width */
+    margin: 0 auto; /* Center the form */
+}
+
+.activity-form h2 {
+    margin-bottom: 15px;
+}
+
+.activity-form .form-group {
+    margin-bottom: 15px;
+}
+
+.activity-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.activity-form input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.activity-form .btn-submit {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.activity-form .btn-submit:hover {
+    background-color: #218838;
 }

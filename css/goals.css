@@ -10,16 +10,6 @@ body {
     background-color: #f4f4f9; /* Match the global background color */
 }
 
-h1 {
-    background-color: #1e88e5;
-    color: white;
-    padding: 20px;
-    margin: 0;
-    text-align: center;
-    font-size: 2em;
-    width: 100%; /* Ensure the h1 takes up the full width */
-    box-sizing: border-box; /* Ensure padding is included in the width */
-}
 
 .goals-container {
     display: flex;

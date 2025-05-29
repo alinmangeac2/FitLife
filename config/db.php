@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$username = "your_username";
-$password = "your_password";
+$username = "root";
+$password = "1234";
 $dbname = "health_tracker";
 
 // Create connection

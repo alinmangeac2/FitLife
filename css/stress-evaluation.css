@@ -1,4 +1,3 @@
-/* stress-evaluation.css */
 body {
     padding-top: 60px; /* Adjust for fixed nav */
     display: flex;
@@ -8,17 +7,6 @@ body {
     min-height: 100vh; /* Ensure the body takes up the full viewport height */
     margin: 0;
     background-color: #f4f4f9; /* Match the global background color */
-}
-
-h1 {
-    background-color: #388e3c; /* Green header */
-    color: white;
-    padding: 20px;
-    margin: 0;
-    text-align: center;
-    font-size: 2em;
-    width: 100%; /* Ensure the h1 takes up the full width */
-    box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 .stress-container {
@@ -31,9 +19,38 @@ h1 {
     box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
-form {
+
+/* Progress Bar Styles */
+.progress-container {
+    margin: 20px 0;
+    text-align: center;
+    width: 100%; /* Ensure the progress container takes up the full width */
+    max-width: 500px; /* Limit the maximum width */
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress {
+    height: 100%;
+    background-color: #ff4081; /* Pink progress bar */
+    border-radius: 10px;
+    transition: width 0.3s ease;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+    font-size: 0.9em;
+}
+
+.stress-form {
     background: white;
-    padding: 20px;
+    padding: 30px; /* Increased padding for consistency */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
@@ -41,64 +58,39 @@ form {
     margin-bottom: 20px;
 }
 
-form p {
-    margin: 0 0 15px;
-    font-size: 1.1em;
+.stress-form h2 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
     color: #333;
 }
 
-form input[type="radio"] {
-    margin: 10px 5px 10px 0;
+.stress-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
-form label {
-    margin-left: 5px;
+.stress-form input {
+    width: 100%;
+    padding: 10px;
     font-size: 1em;
-    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
 }
 
-form button {
-    background-color: #6200ea;
+.stress-form button {
+    padding: 15px;
+    background-color: #4caf50; /* Green button for consistency */
     color: white;
-    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
-    width: 100%;
-    margin-top: 20px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
 }
 
-form button:hover {
-    background-color: #3700b3;
-}
-
-/* Stress Tips Section */
-.stress-tips {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 500px;
-    margin-top: 20px;
-}
-
-.stress-tips h2 {
-    margin-top: 0;
-    color: #388e3c; /* Green header */
-}
-
-.stress-tips ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.stress-tips li {
-    background: #f9f9f9;
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.stress-form button:hover {
+    background-color: #388e3c; /* Darker green on hover */
 }

@@ -1,43 +1,30 @@
 body {
     font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    padding-top: 60px; /* Adjust for fixed nav */
     background-color: #f4f4f9;
-    color: #333; /* Set text color to dark */
+    color: #333;
+    padding-top: 70px; /* Adjust padding to account for the fixed nav */
 }
 
-h1 {
-    background: linear-gradient(45deg, #6200ea, #ff4081);
-    color: white;
-    padding: 20px;
-    text-align: center;
-    font-size: 2em;
-    border-radius: 0; /* Remove border radius */
-    margin: 0; /* Remove margin */
-    width: 100%; /* Set width to 100% */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative; /* Ensure it stays in flow */
-    top: -7px; /* Adjust to overlap nav padding */
-}
 
 /* Navigation Bar */
 nav {
     background-color: #333;
-    padding: 15px 0;
-    text-align: center;
+    padding: 15px 20px;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px; /* Explicitly set the height */
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
     font-size: 1.1em;
     padding: 12px 20px;
     border-radius: 8px;
@@ -49,10 +36,78 @@ nav a:hover {
     transform: translateY(-2px);
 }
 
+/* Home button */
+.home-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1em;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.home-button:hover {
+    background-color: #388e3c;
+    transform: translateY(-3px);
+}
+
+/* Login and Sign Up buttons container */
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+    margin-right: 30px;
+}
+
+/* Login and Sign Up buttons */
+.login-button, .sign-up-button, .logout-button {
+    background-color: #ff4081;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1em;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login-button:hover, .sign-up-button:hover, .logout-button:hover {
+    background-color: #e91e63;
+    transform: translateY(-3px);
+}
+
+/* Add padding to the content to create space below the fixed nav */
+.content {
+    padding-top: 30px; /* Adjust as needed for spacing below h1 */
+    max-width: 800px;  /* match your form/list max-width */
+    margin: 0 auto;    /* center the content */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Reset h1 margins */
+h1 {
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(45deg, #6200ea, #ff4081);
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 70px; /* Ensure it is right below the fixed menu */
+}
+
+/* Hero section */
 .hero {
     background: url('path/to/your/image.jpg') no-repeat center center;
     background-size: cover;
-    height: 40vh; /* Reduce height */
+    height: 40vh;
     color: darkblue;
     text-align: center;
     display: flex;
@@ -62,20 +117,20 @@ nav a:hover {
     padding: 20px;
     font-size: 2.3em;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
-    margin-bottom: 0; /* Ensure it doesn’t push down */
+    margin-bottom: 0;
 }
 
-/* Center the features section */
+/* Features section */
 .features {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
-    margin-top: -10vh; /* Move it up slightly */
+    margin-top: -10vh;
     text-align: center;
 }
 
-/* Reduce feature box spacing */
+/* Feature boxes */
 .feature {
     background: white;
     margin: 10px;
@@ -93,41 +148,6 @@ nav a:hover {
 .feature h2 {
     color: #6200ea;
     margin-bottom: 10px;
-}
-
-/* Buttons */
-.home-button, .login-button {
-    position: absolute;
-    top: 15px;
-    padding: 12px 25px;
-    border-radius: 8px;
-    font-size: 1em;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-.home-button {
-    left: 15px;
-    background-color: #4caf50;
-    color: white;
-}
-
-.home-button:hover {
-    background-color: #388e3c;
-    transform: translateY(-3px);
-}
-
-.login-button {
-    right: 15px;
-    background-color: #ff4081;
-    color: white;
-}
-
-.login-button:hover {
-    background-color: #e91e63;
-    transform: translateY(-3px);
 }
 
 /* Forms */
