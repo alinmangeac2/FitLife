@@ -53,33 +53,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
     <?php include 'includes/header.php'; ?>
-
-    <div class="login-container">
-        <h1>Login</h1>
-        <?php if (isset($error)): ?>
-            <p class="error"><?php echo $error; ?></p>
-        <?php endif; ?>
-        <form id="login-form" action="login.php" method="POST">
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" required>
-            
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required>
-            
-            <div class="remember-me">
-                <input type="checkbox" id="remember" name="remember">
-                <label for="remember">Remember Me</label>
-            </div>
-            
-            <button type="submit">Login</button>
-            
-            <div class="links">
-                <a href="/reset-password">Forgot Password?</a>
-                <a href="register.php">Sign Up</a>
-            </div>
-        </form>
-    </div>
-
+        <div class="login-container">
+            <h1>Login</h1>
+            <?php if (isset($error)): ?>
+                <p class="error"><?php echo $error; ?></p>
+            <?php endif; ?>
+            <form id="login-form" action="login.php" method="POST">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                
+                <div class="remember-me">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Remember Me</label>
+                </div>
+                
+                <button type="submit">Login</button>
+                
+                <div class="links">
+                    <a href="/reset-password">Forgot Password?</a>
+                    <a href="register.php">Sign Up</a>
+                </div>
+            </form>
+        </div>
     <?php include 'includes/footer.html'; ?>
 </body>
 </html>

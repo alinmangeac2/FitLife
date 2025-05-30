@@ -1,15 +1,26 @@
+/* Consistent style for all progress section headers */
+.progress-container h2 {
+    text-align: center;
+    color: #6200ea;
+    margin: 0 0 15px 0;
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f4f4f9;
     color: #333;
-    padding-top: 70px; /* Adjust padding to account for the fixed nav */
+    margin: 0;
+    padding: 0;
+    /* Remove top padding so header is flush with the top */
 }
 
 
 /* Navigation Bar */
 nav {
     background-color: #333;
-    padding: 15px 20px;
+    padding: 0 20px;
     position: fixed;
     width: 100%;
     top: 0;
@@ -20,6 +31,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     height: 60px; /* Explicitly set the height */
+    margin: 0;
 }
 
 nav a {
@@ -96,7 +108,7 @@ h1 {
     font-size: 2em;
     width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-top: 70px; /* Ensure it is right below the fixed menu */
+    margin-top: 60px; /* Directly below the fixed nav, no extra space above */
 }
 
 /* Hero section */

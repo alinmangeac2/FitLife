@@ -59,7 +59,7 @@ $conn->close();
 <body class="food-journal-page">
     <?php include 'includes/header.php'; ?>
     <h1>Food Journal</h1>
-    <div class="content">
+    <div class="food-container">
         <form id="food-form" class="food-form" action="food-journal.php" method="post">
             <div class="form-group">
                 <label for="meal">Meal:</label>

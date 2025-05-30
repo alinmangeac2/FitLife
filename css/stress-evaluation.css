@@ -3,7 +3,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center; /* Center everything horizontally */
-    justify-content: flex-start; /* Start content from the top */
     min-height: 100vh; /* Ensure the body takes up the full viewport height */
     margin: 0;
     background-color: #f4f4f9; /* Match the global background color */
@@ -18,7 +17,6 @@ body {
     padding: 20px;
     box-sizing: border-box; /* Ensure padding is included in the width */
 }
-
 
 /* Progress Bar Styles */
 .progress-container {

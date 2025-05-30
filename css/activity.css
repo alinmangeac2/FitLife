@@ -1,28 +1,15 @@
-
-/* activity.css */
-body.activity-page {
-    padding-top: 70px; /* Offset for fixed nav */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: 100vh;
-    margin: 0;
-    background-color: #f4f4f9;
-}
-
 .activity-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 100%;
     max-width: 800px;
     padding: 20px;
     box-sizing: border-box;
+    min-height: 80vh;
+    margin: 0 auto;
 }
-
-
-
 
 ul {
     list-style-type: none;

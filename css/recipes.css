@@ -1,13 +1,3 @@
-/* Recipes page specific styles */
-body.recipes-page {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: #f9f9f9;
-    padding: 0; /* Remove padding-top since we're using margin-top on h1 */
-}
-
-
 .recipes-container {
     flex: 1;
     display: flex;
