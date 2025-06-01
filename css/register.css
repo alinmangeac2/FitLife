@@ -1,18 +1,13 @@
-/* General Page Styling */
-body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    padding-top: 60px; /* Adjust for fixed nav */
-    background-color: #f4f4f9;
-    color: #333;
-    display: flex;
-    align-items: center;
-    height: 100vh;
+/* Register container heading style to match login */
+.register-container h1 {
+    background-color: #6200ea;
+    color: white;
+    padding: 20px;
+    margin: -20px -20px 20px -20px;
+    border-radius: 10px 10px 0 0;
 }
-
 /* Registration Form Container */
-.container {
+.register-container {
     max-width: 400px;
     width: 100%;
     padding: 20px;
@@ -21,19 +16,14 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-}
-
-/* Header Style */
-.container h1 {
-    background-color: #6200ea;
-    color: white;
-    padding: 20px;
-    margin: -20px -20px 20px -20px;
-    border-radius: 10px 10px 0 0;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* Labels */
-.container label {
+.register-container label {
     display: block;
     margin: 10px 0 5px;
     text-align: left;
@@ -41,7 +31,7 @@ body {
 }
 
 /* Input Fields */
-.container input {
+.register-container input {
     width: calc(100% - 30px);
     margin: 0 auto 15px;
     padding: 10px;

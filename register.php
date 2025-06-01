@@ -71,10 +71,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/register.css">
 </head>
-<body>
+<body class="register-page">
     <?php include 'includes/header.php'; ?>
-
-    <div class="container">
+    <div class="register-container">
         <h1>Register</h1>
         <?php if (isset($error)): ?>
             <p class="error"><?php echo $error; ?></p>
